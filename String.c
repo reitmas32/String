@@ -1,11 +1,5 @@
 #include "String.h"
 
-void   String_Delete(struct String* _this);
-char*  getString(struct String* _this);
-void   setSting(StringPtr _this, char* _data);
-size_t lengthString(StringPtr _this);
-void   addChar(StringPtr _this, char _char);
-
 StringPtr new_String_void(){
     StringPtr _this = (StringPtr)calloc(1, sizeof(String));
     if(_this){
@@ -61,13 +55,18 @@ void   Str_set(StringPtr _this, char* _data){
     }
 }
 
-size_t str_len(StringPtr _this){
+size_t Str_len(StringPtr _this){
     return _this->length;
 }
 
-void str_addChar(StringPtr _this, char _char){
+void Str_addChar(StringPtr _this, char _char){
     assert(_this);
     _this->string[str_len(_this)] =_char;
     ++_this->length;
+}
+
+char  Str_charAt(StringPtr _this, size_t _index){
+    char* string = Str_get(_this);
+    return string[_index];
 }
 

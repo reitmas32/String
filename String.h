@@ -72,13 +72,21 @@ void   Str_set(StringPtr _this, char* _data);
   * @param   _this                  String refernciado
   * @return  _this-len              longitud del String
   */
-size_t str_len(StringPtr _this);
+size_t Str_len(StringPtr _this);
 
 /**
   * @brief   Str_addChar            Agrega un caracter al final de la cadena
   * @param   _this                  String refernciado
   */
-void   str_addChar(StringPtr _this, char _char);
+void   Str_addChar(StringPtr _this, char _char);
 
+
+/**
+  * @brief   Str_charAt
+  * @param   _this                  String refernciado
+  * @param   _index                 indice a buscar
+  * @return  val                    contenido del indice solicitado
+  */
+ char  Str_charAt(StringPtr _this, size_t _index);
 
 #endif
