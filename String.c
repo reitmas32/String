@@ -61,7 +61,7 @@ size_t Str_len(StringPtr _this){
 
 void Str_addChar(StringPtr _this, char _char){
     assert(_this);
-    _this->string[str_len(_this)] =_char;
+    _this->string[Str_len(_this)] =_char;
     ++_this->length;
 }
 
@@ -69,4 +69,9 @@ char  Str_charAt(StringPtr _this, size_t _index){
     char* string = Str_get(_this);
     return string[_index];
 }
+
+ int  Str_intAt(StringPtr _this, size_t _index){
+     char* string = Str_get(_this);
+     return (int)string[_index];
+ }
 

@@ -89,4 +89,13 @@ void   Str_addChar(StringPtr _this, char _char);
   */
  char  Str_charAt(StringPtr _this, size_t _index);
 
+/**
+  * @brief   Str_charAt
+  * @param   _this                  String refernciado
+  * @param   _index                 indice a buscar
+  * @return  val                    contenido del indice solicitado en entero
+  */
+ int  Str_intAt(StringPtr _this, size_t _index);
+
+
 #endif
