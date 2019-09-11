@@ -82,6 +82,14 @@ void   Str_addChar(StringPtr _this, char _char);
 
 
 /**
+  * @brief   Str_isEmpty            Indica si la cadena esta vacia
+  * @param   _this                  String refernciado
+  * @return  true si la cade aesta vacia
+  */
+bool   Str_isEmpty(StringPtr _this);
+
+
+/**
   * @brief   Str_charAt
   * @param   _this                  String refernciado
   * @param   _index                 indice a buscar
@@ -97,5 +105,16 @@ void   Str_addChar(StringPtr _this, char _char);
   */
  int  Str_intAt(StringPtr _this, size_t _index);
 
+ /**
+ * @brief   Str_toLower            Convierte el String a Minusculas 
+ * @param   _this                  String refernciado
+ */
+void  Str_toLower(StringPtr _this);
+
+ /**
+ * @brief   Str_toLower            Convierte el String a Mayusculas
+ * @param   _this                  String refernciado
+ */
+void  Str_toUpper(StringPtr _this);
 
 #endif
