@@ -106,6 +106,38 @@ bool   Str_isEmpty(StringPtr _this);
  int  Str_intAt(StringPtr _this, size_t _index);
 
  /**
+  * @brief   Str_charBefore
+  * @param   _this                  String refernciado
+  * @param   _index                 indice a buscar
+  * @return  val                    contenido del indice anterior solicitado
+  */
+ char  Str_charBefore(StringPtr _this, size_t _index);
+
+/**
+  * @brief   Str_charBefore
+  * @param   _this                  String refernciado
+  * @param   _index                 indice a buscar
+  * @return  val                    contenido del indice anterior solicitado en entero
+  */
+ int  Str_intBefore(StringPtr _this, size_t _index);
+
+  /**
+  * @brief   Str_charAfter
+  * @param   _this                  String refernciado
+  * @param   _index                 indice a buscar
+  * @return  val                    contenido del indice siguente solicitado
+  */
+ char  Str_charAfter(StringPtr _this, size_t _index);
+
+/**
+  * @brief   Str_charAfter
+  * @param   _this                  String refernciado
+  * @param   _index                 indice a buscar
+  * @return  val                    contenido del indice siguente solicitado en entero
+  */
+ int  Str_intAfter(StringPtr _this, size_t _index);
+
+ /**
  * @brief   Str_toLower            Convierte el String a Minusculas 
  * @param   _this                  String refernciado
  */

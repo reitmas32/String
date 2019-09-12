@@ -79,12 +79,36 @@ int  Str_intAt(StringPtr _this, size_t _index){
   return (int)string[_index];
 }
 
+char  Str_charBefore(StringPtr _this, size_t _index){
+  assert(_index > 0);
+  char* string = Str_get(_this);
+  return string[_index - 1];
+}
+
+int  Str_intBefore(StringPtr _this, size_t _index){
+  assert(_index > 0);
+  char* string = Str_get(_this);
+  return (int)string[_index - 1];
+}
+
+char  Str_charAfter(StringPtr _this, size_t _index){
+  assert((int)_index < (int)Str_len(_this) - 1);
+  char* string = Str_get(_this);
+  return string[_index + 1];
+}
+
+int  Str_intAfter(StringPtr _this, size_t _index){
+  assert((int)_index < (int)Str_len(_this) - 1);
+  char* string = Str_get(_this);
+  return (int)string[_index + 1];
+}
+
 void  Str_toLower(StringPtr _this){
   assert(_this);
   if(!Str_isEmpty(_this)){
-    for (size_t i = 0; i < Str_len(_this); i++)
+    for (size_t i = 0; Str_get(_this)[i]; i++)
     {
-      if(_this->string[i] < 97 && _this->string[i] < 71){
+      if(_this->string[i] <= 90 && _this->string[i] > 64){
         _this->string[i] += 32;
       }
     }
@@ -94,9 +118,9 @@ void  Str_toLower(StringPtr _this){
 void  Str_toUpper(StringPtr _this){
   assert(_this);
   if(!Str_isEmpty(_this)){
-    for (size_t i = 0; i < Str_len(_this); i++)
+    for (size_t i = 0;Str_get(_this)[i]; i++)
     {
-      if(_this->string[i] >= 97 && _this->string[i] < 119){
+      if(_this->string[i] >= 97 && _this->string[i] < 123){
         _this->string[i] -= 32;
       }
     }
